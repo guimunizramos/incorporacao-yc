@@ -13,7 +13,7 @@ const hosts = [
     name: "JUNIOR GANZERLI",
     role: "Convidado Especial",
     title: "Diretor Corpsa Crédito Imobiliário",
-    description: "Especialista em crédito imobiliário com quase 30 anos de mercado e diretor da Corpsa, o maior correspondente Caixa do Brasil. É referência nacional em desburocratização e inteligência financeira para o segmento premium.",
+    description: "Especialista em crédito imobiliário com quase 30 anos de mercado e diretor da Corpsa, <strong>o maior correspondente Caixa do Brasil</strong>. É referência nacional em desburocratização e inteligência financeira para o segmento premium.",
     photo: juniorPhoto,
   },
 ];
@@ -60,9 +60,10 @@ const HostsSection = () => {
               <p className="text-sm md:text-lg font-semibold text-foreground mb-2 md:mb-4">
                 {host.title}
               </p>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                {host.description}
-              </p>
+              <p
+                className="text-sm md:text-base text-muted-foreground leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: host.description }}
+              />
             </div>
           ))}
         </div>
