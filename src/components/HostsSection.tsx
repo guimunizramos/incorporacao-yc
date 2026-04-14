@@ -6,7 +6,7 @@ const hosts = [
     name: "THIAGO CARDIM",
     role: "Anfitrião",
     title: "CEO YouCon",
-    description: "Arquiteto especialista em viabilizar residências de alto padrão, integrando design arrojado com inteligência financeira e previsibilidade de obra.",
+    description: "Arquiteto especialista em viabilizar residências de alto padrão com mais de 400 projetos entregues em 60 cidades pelo Brasil. À frente da YouCon, oferece uma solução completa que integra arquitetura, estratégia técnica e viabilidade financeira.",
     photo: thiagoPhoto,
   },
   {
