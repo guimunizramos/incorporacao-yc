@@ -75,9 +75,7 @@ const HeroSection = () => {
         <h1 className="max-w-[20rem] sm:max-w-[38rem] md:max-w-[48rem] lg:max-w-[58rem] xl:max-w-[68rem] text-[1.75rem] sm:text-[2.15rem] md:text-[2.75rem] lg:text-[3.4rem] xl:text-[4rem] font-bold text-foreground leading-[1.08] sm:leading-[1.1] md:leading-[1.08] tracking-[-0.02em] mb-4 md:mb-6">
           <span className="block text-primary">Antes de Construir:</span>
           <span className="block mx-auto max-w-[20rem] sm:max-w-[36rem] md:max-w-[47rem] lg:max-w-[56rem] xl:max-w-[66rem]">
-            Descubra os Erros que Podem{" "}
-            <br className="hidden md:block" />
-            Encarecer a <span className="whitespace-nowrap">Sua Obra</span>
+            Descubra os Erros que Podem Encarecer a <span className="whitespace-nowrap">Sua Obra</span>
           </span>
         </h1>
 
