@@ -8,7 +8,7 @@ import CountdownBanner from "@/components/CountdownBanner";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background pt-[92px] md:pt-[64px]">
+    <main className="min-h-screen bg-background pt-[64px] md:pt-[56px]">
       <CountdownBanner />
       <HeroSection />
       <BenefitsSection />
