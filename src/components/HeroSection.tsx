@@ -93,7 +93,7 @@ const HeroSection = () => {
 
         {/* Sub-CTA text */}
         <p className="text-xs md:text-sm text-muted-foreground mt-3 md:mt-4">
-          Consultoria ao Vivo
+          Consultoria Ao Vivo | Vagas Limitadas
         </p>
       </div>
     </div>
