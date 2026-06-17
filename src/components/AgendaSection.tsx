@@ -20,7 +20,7 @@ const AgendaSection = () => {
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-6">
               O que vamos apresentar nesta{" "}
-              <span className="text-primary">Consultoria Coletiva</span>:
+              <span className="text-primary">Consultoria</span>:
             </h2>
             <p className="text-sm md:text-lg lg:text-xl text-muted-foreground">
               O arquiteto Thiago Cardim vai mostrar os principais erros cometidos por quem pretende construir e como tomar decisões mais seguras antes da obra.
