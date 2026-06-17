@@ -15,7 +15,7 @@ const CTASection = () => {
                 <span className="text-primary">Inscreva-se agora.</span>
               </h2>
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed">
-                Participe de uma consultoria coletiva com um arquiteto e entenda como planejar melhor a construção da sua casa, evitando desperdícios, retrabalhos e custos futuros.
+                Participe de uma consultoria gratuita com um arquiteto e entenda como planejar melhor a construção da sua casa, evitando desperdícios, retrabalhos e custos futuros.
               </p>
 
               <div className="flex flex-col gap-4 md:flex-row md:justify-center md:gap-6 mb-8 md:mb-10">

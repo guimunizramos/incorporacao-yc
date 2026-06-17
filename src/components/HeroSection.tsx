@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         {/* H2 */}
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-10 max-w-2xl">
-          Participe de uma consultoria coletiva com o arquiteto Thiago Cardim e entenda como evitar decisões que geram desperdícios, retrabalhos e custos inesperados na construção da sua casa.
+          Participe de uma consultoria gratuita com o arquiteto Thiago Cardim e entenda como evitar decisões que geram desperdícios, retrabalhos e custos inesperados na construção da sua casa.
         </p>
 
         {/* CTA */}
