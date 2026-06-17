@@ -35,23 +35,23 @@ const CountdownBanner = () => {
   };
 
   return (
-    <div className="fixed left-0 right-0 top-0 z-50 bg-primary text-white shadow-lg">
-      <div className="container mx-auto flex min-h-[92px] flex-col items-center justify-center gap-2 px-4 py-3 text-center md:min-h-[64px] md:flex-row md:gap-5 md:py-2">
-        <p className="text-sm font-semibold uppercase tracking-wide md:text-base">
+    <div className="fixed left-0 right-0 top-0 z-50 bg-primary/95 text-white shadow-md backdrop-blur-sm">
+      <div className="container mx-auto flex min-h-[64px] flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1.5 px-3 py-2 text-center md:min-h-[56px] md:flex-nowrap md:gap-4">
+        <p className="text-[10px] font-semibold uppercase tracking-wide sm:text-xs md:text-sm">
           {hasStarted ? "A consultoria já começou!" : "Consultoria gratuita ao vivo em:"}
         </p>
 
         {!hasStarted && (
-          <div className="grid grid-cols-4 gap-1.5 sm:gap-2" aria-label="Contagem regressiva para 01/07/2026 às 20h, horário de Brasília">
+          <div className="grid grid-cols-4 gap-1 sm:gap-1.5" aria-label="Contagem regressiva para 01/07/2026 às 20h, horário de Brasília">
             {[
               [countdown.days, "Dias"],
               [countdown.hours, "Horas"],
               [countdown.minutes, "Min"],
               [countdown.seconds, "Seg"],
             ].map(([value, label]) => (
-              <div key={label} className="min-w-[54px] rounded-md bg-black/20 px-2 py-1 leading-none md:min-w-[62px]">
-                <span className="block text-lg font-extrabold md:text-2xl">{formatTimeUnit(Number(value))}</span>
-                <span className="block text-[10px] font-semibold uppercase md:text-[11px]">{label}</span>
+              <div key={label} className="min-w-[42px] rounded bg-black/15 px-1.5 py-1 leading-none md:min-w-[52px] md:px-2">
+                <span className="block text-sm font-extrabold sm:text-base md:text-xl">{formatTimeUnit(Number(value))}</span>
+                <span className="block text-[8px] font-semibold uppercase md:text-[10px]">{label}</span>
               </div>
             ))}
           </div>
@@ -60,7 +60,7 @@ const CountdownBanner = () => {
         <Button
           type="button"
           onClick={scrollToForm}
-          className="h-9 w-full max-w-[260px] bg-white px-4 text-xs font-extrabold text-primary hover:bg-white/90 sm:w-auto md:h-10 md:text-sm"
+          className="h-7 w-auto bg-white px-3 text-[10px] font-extrabold text-primary hover:bg-white/90 md:h-8 md:px-4 md:text-xs"
         >
           {hasStarted ? "ENTRAR AGORA" : "GARANTIR MINHA VAGA"}
         </Button>

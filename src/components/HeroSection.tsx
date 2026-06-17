@@ -24,7 +24,7 @@ const HeroSection = () => {
         aria-label="Casa de alto padrão com Estrutura Metálica"
       />
       <div
-        className="block md:hidden absolute inset-0 bg-cover bg-center bg-fixed will-change-transform"
+        className="block md:hidden absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImageMobile})` }}
         aria-label="Casa de alto padrão com Estrutura Metálica"
       />
@@ -41,7 +41,7 @@ const HeroSection = () => {
         </div>
 
         {/* H1 */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 md:mb-6">
+        <h1 className="text-[1.6875rem] sm:text-[2.025rem] md:text-[2.7rem] lg:text-[3.375rem] xl:text-[4.05rem] font-bold text-foreground leading-tight mb-4 md:mb-6">
           <span className="text-primary">Antes de Construir:</span>{" "}
           Descubra os Erros que Podem Encarecer a Sua Obra
         </h1>
