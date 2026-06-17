@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Button } from "./ui/button";
 
 const EVENT_TIMESTAMP = new Date("2026-07-01T20:00:00-03:00").getTime();
 
@@ -30,10 +29,6 @@ const CountdownBanner = () => {
 
   const hasStarted = timeLeft <= 0;
 
-  const scrollToForm = () => {
-    document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="fixed left-0 right-0 top-0 z-50 bg-primary/95 text-white shadow-md backdrop-blur-sm">
       <div className="container mx-auto flex min-h-[64px] flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1.5 px-3 py-2 text-center md:min-h-[56px] md:flex-nowrap md:gap-4">
@@ -56,14 +51,6 @@ const CountdownBanner = () => {
             ))}
           </div>
         )}
-
-        <Button
-          type="button"
-          onClick={scrollToForm}
-          className="h-7 w-auto bg-white px-3 text-[10px] font-extrabold text-primary hover:bg-white/90 md:h-8 md:px-4 md:text-xs"
-        >
-          {hasStarted ? "ENTRAR AGORA" : "GARANTIR MINHA VAGA"}
-        </Button>
       </div>
     </div>
   );
