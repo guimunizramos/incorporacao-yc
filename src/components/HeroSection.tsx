@@ -1,8 +1,38 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/bg-desktop.jpg";
 import heroImageMobile from "@/assets/bg-mobile.jpg";
 import youconLogo from "@/assets/youcon-logo.png";
 const HeroSection = () => {
+  const mobileBgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const updateParallax = () => {
+      const mobileBg = mobileBgRef.current;
+
+      if (!mobileBg || !mobileQuery.matches || reducedMotionQuery.matches) {
+        if (mobileBg) {
+          mobileBg.style.transform = "translate3d(0, 0, 0)";
+        }
+        return;
+      }
+
+      const offset = window.scrollY * 0.22;
+      mobileBg.style.transform = `translate3d(0, ${offset}px, 0)`;
+    };
+
+    updateParallax();
+    window.addEventListener("scroll", updateParallax, { passive: true });
+    window.addEventListener("resize", updateParallax);
+
+    return () => {
+      window.removeEventListener("scroll", updateParallax);
+      window.removeEventListener("resize", updateParallax);
+    };
+  }, []);
   const scrollToForm = () => {
     document.getElementById('cta-section')?.scrollIntoView({
       behavior: 'smooth'
@@ -24,7 +54,8 @@ const HeroSection = () => {
         aria-label="Casa de alto padrão com Estrutura Metálica"
       />
       <div
-        className="block md:hidden absolute inset-0 bg-cover bg-center"
+        ref={mobileBgRef}
+        className="block md:hidden absolute -inset-y-16 inset-x-0 bg-cover bg-center will-change-transform"
         style={{ backgroundImage: `url(${heroImageMobile})` }}
         aria-label="Casa de alto padrão com Estrutura Metálica"
       />
