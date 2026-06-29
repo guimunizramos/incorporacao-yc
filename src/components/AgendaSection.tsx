@@ -2,10 +2,30 @@ import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 
 const agendaItems = [
-  "Terreno: O que precisa ser analisado antes de começar o projeto da sua casa.",
-  "Projeto e Orçamento: Como alinhar o que você deseja construir ao valor disponível.",
-  "Decisões Antecipadas: O que precisa ser definido no projeto e não deve ser deixado para a obra.",
-  "Consultoria ao Vivo: Envie suas dúvidas sobre terreno, projeto, orçamento e construção.",
+  {
+    title: "O que é incorporação imobiliária",
+    description: "Entenda, de forma simples, como um terreno pode dar origem a um empreendimento imobiliário.",
+  },
+  {
+    title: "Potencial construtivo do terreno",
+    description: "Conheça os principais fatores que determinam o que pode ser construído e desenvolvido em uma área.",
+  },
+  {
+    title: "Estudo de viabilidade",
+    description: "Entenda como arquitetura, legislação, custos, produto imobiliário e mercado são analisados antes de uma decisão.",
+  },
+  {
+    title: "Estruturação do empreendimento",
+    description: "Veja como as diferentes etapas e profissionais precisam estar conectados para transformar o potencial do terreno em um projeto estruturado.",
+  },
+  {
+    title: "Modelos de parceria",
+    description: "Conheça possibilidades de participação entre proprietários de terrenos, investidores, incorporadores e parceiros estratégicos.",
+  },
+  {
+    title: "Estratégia patrimonial",
+    description: "Entenda como decisões imobiliárias bem estruturadas podem contribuir para a construção, consolidação e continuidade do patrimônio.",
+  },
 ];
 
 const AgendaSection = () => {
@@ -19,11 +39,10 @@ const AgendaSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-6">
-              O que vamos apresentar nesta{" "}
-              <span className="text-primary">Consultoria</span>:
+              O que vamos abordar nesta Consultoria Fechada:
             </h2>
             <p className="text-sm md:text-lg lg:text-xl text-muted-foreground">
-              O arquiteto Thiago Cardim vai mostrar os principais erros cometidos por quem pretende construir e como tomar decisões mais seguras antes da obra.
+              Um encontro direto e prático para quem possui um terreno, avalia oportunidades imobiliárias ou deseja entender os caminhos para desenvolver um empreendimento.
             </p>
           </div>
 
@@ -37,7 +56,8 @@ const AgendaSection = () => {
                   <Check className="w-3 h-3 md:w-5 md:h-5 text-primary" />
                 </div>
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
-                  {item}
+                  <span className="font-semibold">{item.title}:</span>{" "}
+                  <span className="text-muted-foreground">{item.description}</span>
                 </p>
               </div>
             ))}
@@ -50,7 +70,7 @@ const AgendaSection = () => {
               onClick={scrollToForm}
               className="w-full sm:w-auto text-sm md:text-base h-12 md:h-14"
             >
-              GARANTIR MEU ACESSO GRATUITO
+              QUERO GARANTIR MEU LUGAR NA SALA
             </Button>
           </div>
         </div>

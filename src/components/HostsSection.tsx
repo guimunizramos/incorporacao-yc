@@ -3,10 +3,15 @@ import thiagoPhoto from "@/assets/thiago-cardim.png";
 const hosts = [
   {
     name: "THIAGO CARDIM",
-    role: "ARQUITETO",
-    title: "CEO YouCon",
-    description: "Arquiteto especialista em projetos residenciais de alto padrão, com mais de 400 projetos desenvolvidos em 60 cidades pelo Brasil. À frente da YouCon, lidera uma equipe integrada de arquitetura, engenharia, interiores e orçamento, ajudando famílias a tomarem decisões mais seguras antes da construção.",
-    photo: thiagoPhoto,
+    role: "Arquiteto e CEO da YouCon Arquitetura",
+    photo: thiagoPhoto as string | null,
+    description: "À frente da YouCon Arquitetura, Thiago Cardim atua no desenvolvimento de projetos completos e estudos de viabilidade que conectam arquitetura, engenharia e estratégia imobiliária. Durante a consultoria, ele mostrará como analisar o potencial construtivo de terrenos e transformar essas informações em empreendimentos mais funcionais, atrativos e competitivos.",
+  },
+  {
+    name: "SAMUEL MOSCA",
+    role: "Especialista em Patrimônio Imobiliário e sócio-fundador da SMH Patrimonial",
+    photo: null as string | null,
+    description: "Formado em Direito e sócio-fundador da SMH Patrimonial, Samuel Mosca atua na condução estratégica de projetos voltados à estruturação patrimonial. Seu trabalho conecta o mercado imobiliário a decisões societárias, tributárias e sucessórias, com foco na construção, consolidação e continuidade de patrimônios.",
   },
 ];
 
@@ -14,19 +19,21 @@ const HostsSection = () => {
   return (
     <section className="py-10 md:py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-6 md:mb-16">
+        <div className="text-center mb-4 md:mb-8">
           <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            Planejamento, Arquitetura e Decisões Mais Seguras
+            Duas visões estratégicas sobre incorporação e patrimônio
           </h2>
+          <p className="text-sm md:text-lg text-muted-foreground mt-3 md:mt-6 max-w-2xl mx-auto">
+            Arquitetura e estruturação patrimonial reunidas para mostrar os principais caminhos entre o potencial de um terreno e o desenvolvimento de um empreendimento.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:gap-8 lg:gap-16 max-w-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-4xl mx-auto">
           {hosts.map((host, index) => (
             <div
               key={index}
-              className="text-center p-4 md:p-8 pt-12 md:pt-14 rounded-xl md:rounded-2xl bg-card border border-border relative overflow-hidden"
+              className="text-center p-4 md:p-8 pt-10 md:pt-12 rounded-xl md:rounded-2xl bg-card border border-border"
             >
-              {/* Avatar */}
               <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 rounded-full overflow-hidden border-2 border-primary/30">
                 {host.photo ? (
                   <img
@@ -35,27 +42,23 @@ const HostsSection = () => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-muted flex items-center justify-center">
-                    <span className="text-2xl md:text-4xl font-bold text-muted-foreground">
+                  <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-2xl md:text-4xl font-bold text-primary">
                       {host.name.charAt(0)}
                     </span>
                   </div>
                 )}
               </div>
 
-              <h3 className="text-lg md:text-2xl font-bold text-primary mb-1">
+              <h3 className="text-lg md:text-2xl font-bold text-primary mb-2">
                 {host.name}
               </h3>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                ({host.role})
+              <p className="text-xs md:text-sm font-semibold text-foreground uppercase tracking-wider mb-3 md:mb-5">
+                {host.role}
               </p>
-              <p className="text-sm md:text-lg font-semibold text-foreground mb-2 md:mb-4">
-                {host.title}
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                {host.description}
               </p>
-              <p
-                className="text-sm md:text-base text-muted-foreground leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: host.description }}
-              />
             </div>
           ))}
         </div>
