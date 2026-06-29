@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const EVENT_TIMESTAMP = new Date("2026-07-01T20:00:00-03:00").getTime();
+const EVENT_TIMESTAMP = new Date("2026-07-16T20:00:00-03:00").getTime();
 
 const getTimeLeft = () => Math.max(EVENT_TIMESTAMP - Date.now(), 0);
 
